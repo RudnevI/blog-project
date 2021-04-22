@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add post</title>
+    <link th:insert="blocks/bootstrap">
+</head>
+<body>
+
+<div th:insert="blocks/navbar"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 offset-3">
+            <form method="post">
+
+                <label  class="form-label">Header</label>
+                <input type="text" class="form-control"  placeholder="Header">
+
+
+                <label  class="form-label">Text</label>
+                <input type="text" class="form-control"  placeholder="Your text goes here">
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
