@@ -8,7 +8,17 @@
 <body>
 
 <div th:insert="blocks/navbar"></div>
+<div class="container-fluid">
+    <div class="row" th:each="post: ${posts}">
 
+        <div class="col-sm-6 offset-3">
+            <div th:text="${post.getHeader()}"></div>
+            <hr>
+            <div th:text="${post.getContent()}"></div>
+
+        </div>
+    </div>
+</div>
 
 
 

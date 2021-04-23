@@ -29,11 +29,17 @@ public class UserServiceImpl implements UserService {
 
         return repo.findByUserName(username);
     }
-
     @Override
-    public void saveUser(DbUser user) {
+    public DbUser saveUser (final DbUser user) {
 
-        repo.save(user);
+        DbUser checkUser = repo.findByEmail(user.getEmail());
+
+        if (checkUser == null){
+
+            user.setPassword(user.getPassword());
+            return repo.save(user);
+        }
+        return null;
     }
 
 

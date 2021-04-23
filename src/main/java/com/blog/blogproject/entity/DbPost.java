@@ -15,14 +15,16 @@ public class DbPost extends BaseEntity {
     private String header;
     private String content;
 
-    @Nullable
-    @Column(name = "hash_tag")
-    private String hashTag;
 
     @ManyToOne(fetch = FetchType.EAGER)
     private DbUser dbUser;
 
+    public DbPost(String header, String content) {
+        this.header = header;
+        this.content = content;
+    }
 
-
-
+    public DbPost() {
+        super();
+    }
 }

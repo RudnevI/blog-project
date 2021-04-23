@@ -14,6 +14,6 @@ public interface UserService {
     DbUser findUserByUserName(String username);
 
 
-    void saveUser(DbUser user);
+    DbUser saveUser(DbUser user);
 
 }

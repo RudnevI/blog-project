@@ -6,7 +6,9 @@ import java.util.List;
 
 public interface PostService {
 
-    public List<DbPost>findAllPosts();
+    List<DbPost> findAllPosts();
 
-    public List<DbPost>findAllPostsByUser(String userName);
+    List<DbPost> findAllPostsByUser(String userName);
+
+    DbPost savePost(DbPost post);
 }

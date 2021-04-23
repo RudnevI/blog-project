@@ -29,5 +29,10 @@ public class PostServiceImpl implements PostService {
         return null;
     }
 
+    @Override
+    public DbPost savePost(DbPost post) {
+        return repo.save(post);
+    }
+
 
 }
